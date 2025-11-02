@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poom Enterprises</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Reset & Global */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #f9f9f9; color: #1a1a1a; line-height: 1.6; overflow-x: hidden; }
+    a { color: #4f46e5; text-decoration: none; transition: 0.2s; }
+    a:hover { text-decoration: underline; }
+
+    /* Header & Hero */
+    header { background: linear-gradient(135deg,#4f46e5,#3730a3); color: #fff; text-align: center; padding: 6rem 2rem 4rem; position: relative; overflow: hidden; }
+    header h1 { font-size: 2.5rem; margin-bottom: 1rem; animation: fadeInDown 1s ease forwards; opacity: 0; }
+    header p { font-size: 1.2rem; opacity: 0; animation: fadeInUp 1s ease 0.5s forwards; }
+
+    @keyframes fadeInDown { to { opacity: 1; transform: translateY(0); } from { opacity: 0; transform: translateY(-20px); } }
+    @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } from { opacity: 0; transform: translateY(20px); } }
+
+    /* Nav */
+    nav { background: #3730a3; display: flex; justify-content: center; padding: 0.5rem 0; }
+    nav a { margin: 0 1rem; color: #fff; font-weight: 600; transition: 0.2s; }
+    nav a:hover { color: #c7d2fe; }
+
+    /* Sections */
+    section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
+    section h2 { font-size: 2rem; text-align: center; color: #4f46e5; margin-bottom: 1rem; }
+    section p { text-align: center; max-width: 800px; margin: 0.5rem auto 2rem; color: #4b5563; }
+
+    /* Projects Grid */
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; margin-top: 2rem; }
+    .project-card { background: #fff; border-radius: 10px; padding: 2rem 1.5rem; box-shadow: 0 6px 18px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+    .project-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
+    .project-card i { font-size: 2.5rem; color: #4f46e5; margin-bottom: 1rem; transition: transform 0.3s; }
+    .project-card:hover i { transform: rotate(15deg) scale(1.2); }
+    .project-card h3 { margin-bottom: 0.5rem; font-size: 1.3rem; }
+    .project-card p { font-size: 0.95rem; color: #4b5563; }
+
+    /* Contact */
+    .contact { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+    .contact a { background: #4f46e5; color: #fff; padding: 0.75rem 1.5rem; border-radius: 5px; font-weight: 600; transition: 0.2s; }
+    .contact a:hover { background: #3730a3; }
+
+    /* Footer */
+    footer { text-align: center; padding: 2rem; background: #1f2937; color: #d1d5db; font-size: 0.9rem; }
+
+    /* Hero background shapes */
+    header::before, header::after {
+      content: ""; position: absolute; border-radius: 50%; opacity: 0.15; z-index: 0;
+    }
+    header::before { width: 400px; height: 400px; background: #fff; top: -50px; left: -50px; }
+    header::after { width: 600px; height: 600px; background: #fff; bottom: -100px; right: -100px; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      nav { flex-direction: column; }
+      nav a { margin: 0.5rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Hero -->
+  <header>
+    <h1>Poom Enterprises</h1>
+    <p>Exploring web development & Minecraft servers through hobby projects</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Our Projects</h2>
+    <p>We focus on innovative web development and Minecraft server projects for hobbyist and community-driven purposes.</p>
+    <div class="projects">
+      <div class="project-card">
+        <i class="fas fa-code"></i>
+        <h3>Web Development</h3>
+        <p>Custom websites, apps, and online tools for personal and small-scale projects.</p>
+      </div>
+      <div class="project-card">
+        <i class="fas fa-cube"></i>
+        <h3>Minecraft Servers</h3>
+        <p>Hosting and developing Minecraft servers with custom plugins, mini-games, and community management tools.</p>
+      </div>
+      <div class="project-card">
+        <i class="fas fa-rocket"></i>
+        <h3>Experimental Projects</h3>
+        <p>Small experimental tech projects and software tools exploring new ideas and features.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>For general business or legal inquiries, you can reach out to us via email:</p>
+    <div class="contact">
+      <a href="mailto:business@pooms.dev">General Inquiries</a>
+      <a href="mailto:legal@pooms.dev">Legal Inquiries</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Poom Enterprises. All rights reserved. | business.pooms.dev
+  </footer>
+
+</body>
+</html>
